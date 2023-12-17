@@ -1,0 +1,42 @@
+Promedio INICIO{
+DNUM numero,continuar,contador,menor,mayor,promedio,total;
+continuar=1;
+contador=1;
+ESCRIBIR(#   Programa para calcular el promedio, mayor y menor de N datos   #);
+LEER (#Introduce un numero:  #+numero);
+SI(numero=0){
+continuar=2;
+FSI}
+menor=numero;
+mayor=numero;
+promedio=numero;
+FSI(continuar<2){
+LEER (# Quieres ingresar otro 1-Si   2-No  #+continuar);
+CUANDO( continuar=1){
+
+LEER(#Introduce un numero: #+numero);
+SI(numero=0){
+continuar=2;
+FSI}
+promedio=numero+promedio;
+total=promedio;
+SI(numero<menor){
+menor=numero;
+FSI}
+SI(numero>mayor){
+mayor=numero;
+FSI}
+contador=contador+1;
+SI(continuar<2){
+LEER (# Quieres ingresar otro 1-Si   2-No  #+continuar);
+FSI}
+FCUANDO}
+FSI}
+promedio=promedio/contador;
+ESCRIBIR(#El  ingresaste:  #+contador+ #datos#);
+ESCRIBIR(#El dato mayor es:  #+mayor);
+ESCRIBIR(#El dato menor es:  #+menor);
+ESCRIBIR(#El promedio es:  #+promedio);
+ESCRIBIR(#El total es:  #+total);
+
+FINAL}

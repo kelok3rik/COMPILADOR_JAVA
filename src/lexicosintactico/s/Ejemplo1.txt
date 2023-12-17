@@ -1,0 +1,38 @@
+Facturar INICIO{
+NUM i,no;
+DNUM cantidad, costo, total, opc, acumulador, paga, des;
+WORD articulo;
+opc=1;
+i=0;
+no=1;
+CUANDO (opc<2){
+ESCRIBIR (#Tienda la soledad #);
+ESCRIBIR(#Dame el articulo: #+no);
+LEER (articulo);
+LEER (#¿Cuantos compraste? #+cantidad);
+LEER (#¿Cuanto cuesta? #+costo);
+
+total=cantidad*costo;
+acumulador=acumulador+total;
+
+SI(acumulador>100){
+des=acumulador/10;
+paga=acumulador-des;
+FSI}
+SI(acumulador<100){
+paga=acumulador;
+
+FSI}
+ESCRIBIR(# De eso serian #+total);
+i=i+1;
+no=no+1;
+LEER (#¿Quieres otro?  1-Si  2-No #+opc);
+ESCRIBIR (#Candidad: #+acumulador);
+ESCRIBIR (#Descuento:  #+des);
+ESCRIBIR (#Compraste#+i, #Articulos y debes pagar  #+paga);
+
+
+
+FCUANDO}
+
+FINAL}

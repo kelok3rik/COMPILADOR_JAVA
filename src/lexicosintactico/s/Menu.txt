@@ -1,0 +1,15 @@
+Menu INICIO{
+NUM op;
+ESCRIBIR(#Menu Cafeteria Ingrese una Opcion 1-Cafe Capuchino, 2-Cafe Expreso#);
+LEER (#Ingrese una opcion: #+op);
+SI(op=1){
+LEER(#Ha seleccionado Cafe Capuchino#);
+
+FSI}
+SI(op=2){
+LEER(#Ha seleccionado Cafe Expreso#);
+
+FSI}
+
+
+FINAL}

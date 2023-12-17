@@ -1,0 +1,29 @@
+Promedios INICIO{
+DNUM mayor,menor;
+DNUM num;
+DNUM total,promedio, dato,auxmay;
+
+
+ESCRIBIR (#  Programa para calcular el promedio  mayor y menor  #);
+LEER (# Cuantos numeros vas a ingresar: #+mayor);
+
+START i=1 STEP 1 TO mayor{
+ESCRIBIR (#Dame el numero:  #+i);
+TAKE (num);
+dato=num;
+auxmay=mayor;
+total=total+dato;
+promedio=total/auxmay;
+SI(num>mayor){
+mayor=num;
+FSI}
+SI(num<mayor){
+menor=num;
+FSI}
+
+STOP}
+ESCRIBIR(# El numero mayor es :  #+mayor);
+ESCRIBIR(# El promedio es :  #+promedio);
+ESCRIBIR(# El numero menor es :  #+menor);
+
+FINAL}

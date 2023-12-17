@@ -1,0 +1,38 @@
+Fibonacci INICIO{
+
+NUM longitud,ANTERIOR,ACTUAL,CONTADOR,SIGUIENTE;
+
+ESCRIBIR(#Progama fibonacci#);
+LEER(# Introduzca la longitud: #+longitud);
+
+SI(longitud<0){
+ESCRIBIR(#La longitud debe ser mayor que 0#);
+FSI}
+
+SI(longitud=0){
+ESCRIBIR(#La serie es: 0#);
+FSI}
+
+SI(longitud>0){
+    ANTERIOR=0;
+    ACTUAL=1;
+    CONTADOR=1;
+
+    ESCRIBIR(#Serie fibonacci #);
+
+    CUANDO(CONTADOR<longitud){
+        SIGUIENTE=ANTERIOR+ACTUAL;
+        ESCRIBIR(#, #+SIGUIENTE);
+
+        ANTERIOR=ACTUAL;
+        ACTUAL=SIGUIENTE;
+        CONTADOR=CONTADOR+1;
+       
+    FCUANDO}
+
+    ESCRIBIR(#.#);
+FSI}
+FINAL}
+
+
+
