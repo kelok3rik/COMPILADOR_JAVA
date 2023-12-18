@@ -1,0 +1,37 @@
+Factorial INICIO{
+
+
+NUM numero,factorial,contador,aux;
+numero=0;
+factorial=0;
+contador=0;
+aux=0;
+
+ESCRIBIR(#Progama que calcula el factorial de un numero#);
+numero=5;
+
+SI(numero<0){
+ESCRIBIR(#No se puede calcular el factorial de un numero negativo#);
+FSI}
+SI(numero=0){
+ESCRIBIR(#El factorial de 0 es 1#);
+FSI}
+SI(numero>0){
+factorial=1;
+contador=1;
+aux=numero+1;
+
+CUANDO(contador<aux){
+factorial=factorial*contador;
+contador=contador+1;
+
+FCUANDO}
+
+
+FSI}
+ESCRIBIR(#El factorial de #+numero+# es #+factorial);
+
+FINAL}
+
+
+

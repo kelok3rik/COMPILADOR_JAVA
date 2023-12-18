@@ -1,0 +1,25 @@
+Fibonacci INICIO{
+
+ NUM limite, a, b, temp, terminos;
+    limite=10;
+    a=0;
+    b=1;
+    terminos=0;
+
+    ESCRIBIR("#Los primeros " + limite + " términos de la serie de Fibonacci son:#");
+
+
+
+    CUANDO(terminos<limite){
+        ESCRIBIR(a);
+        temp=a+b;
+        a=b;
+        b=temp;
+
+        terminos=terminos+1;
+       
+    FCUANDO}
+
+  
+
+FINAL}
